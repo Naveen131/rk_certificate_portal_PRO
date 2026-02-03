@@ -109,3 +109,14 @@
           <div class="cert-date">
             Uploaded on {{ cert.uploaded_at|date:"d M Y" }}
           </div>
+        </div>
+        <a href="{% url 'download_certificate' cert.id %}"
+           class="download-btn">
+          ⬇ Download Certificate
+        </a>
+      </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+{% endblock %}
